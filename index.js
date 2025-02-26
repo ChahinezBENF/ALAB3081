@@ -47,10 +47,13 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   //console.log(dontDoThis);
 
   
+
+  console.log (`*******PART 1******`);
+
 //part 1
 //Check if all numbers are divisible by 5.
 //Cache the result in a variable.
-  let DivBy5 = ((n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) ) === 0;
+ const DivBy5 = ((n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) ) === 0;
   //console.log(DivBy5);
   console.log (`The four numbers are  divisible by 5: ${DivBy5}.`);
   console.log (`*******************`);
@@ -58,7 +61,7 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 
 //Check if the first number is larger than the last.
 //Cache the result in a variable.
-let LargThan = n1 > n4 ;
+const LargThan = n1 > n4 ;
 //console.log(LargThan);
 console.log (`first number ${n1} is larger than the last ${n4} : ${DivBy5}.`);
 console.log (`*******************`);
@@ -67,7 +70,7 @@ console.log (`*******************`);
 //Subtract the first number from the second number.
 //Multiply the result by the third number.
 //Find the remainder of dividing the result by the fourth number
-let ArithmiticChain = ((n2 - n1) * n3) % n4 ;
+const ArithmiticChain = ((n2 - n1) * n3) % n4 ;
 //console.log(ArithmiticChain);
 console.log (`Subtraction of the first number ${n2} from the second number ${n1} is: ${(n2 - n1)}.`);
 console.log (`Multiple the result by the third number ${n3} is: ${(n2 - n1)*n3}.`);
@@ -81,4 +84,50 @@ console.log (`*******************`);
 const isLessOrEqual25 = n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25;
 //console.log(isLessOrEqual25);
 console.log (`All the nember are Less or Equal than 25 : ${isLessOrEqual25}.`);
+console.log (`*******************`);
+
+console.log (`*******PART 2******`);
+
+//Part 2 
+//The distance of the trip, in total, is 1,500 miles.
+const distance = 1500;
+//You have a fuel budget of $175.
+const budget = 175; 
+//The average cost of fuel is $3 per gallon.
+const price = 3;
+
+//At 55 miles per hour, you get 30 miles per gallon.
+const at55mph = 30;
+
+//At 60 miles per hour, you get 28 miles per gallon.
+const at60mph = 28;
+
+//At 75 miles per hour, you get 23 miles per gallon.
+const at75mph = 23;
+
+// for 55 miles per hour : 
+const gallonNeed55mph = distance / at55mph;
+console.log (`For 55 miles per hour you need : ${gallonNeed55mph} for the entire trip`);
+const coverAt55mph = (price * gallonNeed55mph) <= budget;
+console.log (`the buget will be : ${price * gallonNeed55mph} $ wich is enough`);
+const timeIn55mph = distance / 55;
+console.log (`the trip will take : ${timeIn55mph}  hour`);
+console.log (`*******************`);
+
+// for 60 miles per hour : 
+const gallonNeed60mph = distance / at60mph;
+console.log (`For 60 miles per hour you need : ${gallonNeed60mph} for the entire trip`);
+const coverAt60mph = (price * gallonNeed60mph) <= budget;
+console.log (`the buget will be : ${price * gallonNeed60mph} $ wich is enough`);
+const timeIn60mph = distance / 60;
+console.log (`the trip will take : ${timeIn60mph}  hour`);
+console.log (`*******************`);
+
+// for 75 miles per hour : 
+const gallonNeed75mph = distance / at55mph;
+console.log (`For 55 miles per hour you need : ${gallonNeed75mph} for the entire trip`);
+const coverAt75mph = (price * gallonNeed75mph) <= budget;
+console.log (`the buget will be : ${price * gallonNeed75mph} $ wich is enough`);
+const timeIn75mph = distance / 75;
+console.log (`the trip will take : ${timeIn75mph}  hour`);
 console.log (`*******************`);
